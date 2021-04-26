@@ -5,7 +5,18 @@
 <body>
 <?php
     echo '<h1>Bonjour, monde!</h1><br>';
-    echo $_SERVER['REMOTE_ADDR'];
+
+    class Vehicule {
+        public $vitesse = 420;
+    }
+
+    function checkVitesse(Vehicule $veh) {
+        if ($veh->vitesse > 100)
+            echo "rapide";
+    }
+
+    $v = new Vehicule;
+    checkVitesse($v);
 ?>
 </body>
 </html>
